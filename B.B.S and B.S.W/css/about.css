@@ -1,0 +1,177 @@
+/* Achievements */
+.about_us {
+    margin-top: 3rem;
+    height: 45rem;
+}
+
+.about_us-container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 5rem;
+}
+
+.about_us-right > p {
+    margin: 1.6rem 0 2.5rem;
+}
+
+.achievements_cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.achievement_card {
+    background: #2e3267;
+    padding: 1.6rem;
+    border-radius: 1rem;
+    text-align: center;
+    transition: all ease 400ms;
+}
+
+.achievement_card:hover {
+    background: var(--color-bg2);
+    box-shadow: 0 3rem 3rem rgba(7, 27, 27);
+}
+
+.achievement_icon {
+    background: var(--color-danger);
+    padding: 0.6rem;
+    border-radius: 1rem;
+    display: inline-block;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.achievement_card:nth-child(2) .achievement_icon {
+    background: var(--color-sucess)
+}
+
+.achievement_card:nth-child(3) .achievement_icon {
+    background: var(--color-primary)
+}
+
+.achievement_card p {
+    margin-top: 1rem;
+}
+
+
+/* Team */
+
+.team {
+    background: var(--color-bg1);
+    box-shadow: inset 0 0 3rem rgba(0, 0, 0.5);
+    height: 55rem;
+}
+
+.team img {
+    width: 80%;
+}
+
+.team_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.team_member {
+    background: var(--color-bg2);
+    padding-left: 3.4rem;
+    padding-top: 3rem;
+    border: 1px solid transparent;
+    transition: ease all 400ms;
+}
+
+.team_member:hover {
+    background: transparent;
+    border-color: var(--color-primary);
+}
+
+.team_member-image img {
+    filter: saturate(0);
+}
+
+.team_member:hover img {
+    filter: saturate(1);
+}
+
+.team_member-info * {
+   text-align: center;
+   padding-right: 3.5rem;
+}
+
+.team_member-info > p {
+  color: rgb(169,169,169);
+} 
+
+/* Media QUERIES (Tablets) */
+
+@media screen and (max-width: 1024px) {
+    .about_us {
+        margin-top: 2rem;
+        height: 70rem;
+    }
+
+    .about_us img {
+        width: 100%;
+    }
+
+    .about_us-container {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .about_us-left {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .team_container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .team_member{
+        padding: 1rem;
+    }
+
+   .team img {
+       width: 100%;
+   }
+
+   .team_member-info * {
+    text-align: center;
+    padding-left: 4rem;
+ }
+
+ footer {
+     height: 45rem;
+ }
+}
+
+/* Media QUERIES (Mobile) */
+
+@media screen and (max-width: 600px) {
+    
+    .about_us {
+        height: 75rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .achievements_cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+
+    .team_container {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+    
+    .team_member {
+        padding: 0;
+    }
+
+    .team_member {
+        margin-bottom: 1.5rem;
+    }
+}
